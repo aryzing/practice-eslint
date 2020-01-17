@@ -1,0 +1,20 @@
+{
+  "name": "@aryzing/mfe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Eduard Bardají Puig <ebardaji@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config ../../config/webpack.config.prod.js",
+    "dev:test": "jest --watch",
+    "dev:types": "tsc --watch",
+    "dev:js": "webpack --config ../../config/webpack.config.dev.js",
+    "test": "jest",
+    "typecheck": "tsc",
+    "lint": "eslint src --ext .js"
+  },
+  "dependencies": {
+    "@aryzing/bar": "1.0.0"
+  }
+}

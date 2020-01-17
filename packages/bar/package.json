@@ -1,0 +1,25 @@
+{
+  "name": "@aryzing/bar",
+  "private": true,
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "author": "Eduard Bardají Puig <ebardaji@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn run build:types && yarn run build:js",
+    "build:types": "tsc -p tsconfig.build.json",
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline --ignore \"src/**/*.test.ts\" --root-mode upward",
+    "dev:test": "jest --watch",
+    "dev:types": "tsc --watch",
+    "dev:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline --ignore \"src/**/*.test.ts\" --root-mode upward --watch",
+    "test": "jest",
+    "typecheck": "tsc",
+    "lint": "eslint src --ext .js"
+  },
+  "sideEffects": false,
+  "peerDependencies": {
+    "lodash": "^4.17.15"
+  }
+}
